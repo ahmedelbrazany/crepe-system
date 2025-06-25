@@ -1,4 +1,3 @@
-<p align="center"><img src="https://i.imgur.com/Tp7AJyT.png"></p>
 
 ## Usage
 
