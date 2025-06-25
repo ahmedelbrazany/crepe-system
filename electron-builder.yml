@@ -1,0 +1,21 @@
+appId: com.kemo.system
+productName: Kemo System
+copyright: Copyright © 2018 Yoshihide Shiono
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null
+win:
+  icon: resources/icon.ico # أيقونة التطبيق لـ Windows
+  target:
+    - nsis # يحدد إصدار NSIS كـ Installer (تنفيذية exe)
+
+nsis:
+  oneClick: false # يطلب تأكيد التثبيت (تعطيل التثبيت الصامت)
+  perMachine: true # تثبيت لكل المستخدمين
+  allowToChangeInstallationDirectory: true # يسمح بتغيير مسار التثبيت

@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+@layer components {
+  .btn-blue {
+    @apply text-white font-bold px-4 py-2 rounded bg-blue-600 hover:bg-blue-500;
+  }
+}
+
+/* الوضع الداكن أصبح هو الافتراضي في :root */
+:root {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+.logo {
+  height: 10em;
+  padding: 2em;
+  will-change: filter;
+  transition: filter 300ms;
+  display: block;
+  margin: 0 auto;
+}
+h1 {
+  font-family: var(--font-arabic1), sans-serif;
+  font-size: 3.2em;
+  line-height: 1.1;
+  text-align: center;
+}
+h2 {
+  font-family: var(--font-arabic1), sans-serif;
+  font-size: 2.2em;
+  line-height: 1.1;
+  text-align: center;
+  padding-top: 20px;
+}
+body {
+  place-items: center;
+}
+.selectRouteHome {
+  display: block;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --font-geist-sans: "GeistSans";
+  --font-geist-mono: "GeistMono";
+  --font-nikea: "Nikea";
+  --font-arabic1: "Arabic1";
+  --orange: #e39f0c;
+  text-align: center;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #e39f0c);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.custom-button {
+  padding: 15px 100px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: var(--font-arabic1);
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+  transform: translateY(10%);
+  position: relative;
+}
+
+.custom-button::before,
+.custom-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transition: transform 0.4s ease-in-out;
+}
+
+.custom-button::before {
+  top: 0;
+  left: 100%;
+  transform: translateX(0);
+}
+
+.custom-button::after {
+  bottom: 0;
+  right: 100%;
+  transform: translateX(0);
+}
+
+.custom-button:hover {
+  color: #e39f0c;
+  font-weight: bold;
+  text-shadow: 4px 4px 5px rgba(227, 159, 12, 0.1);
+}
+
+.custom-button:hover::before {
+  transform: translateX(-100%);
+  left: 0;
+}
+
+.custom-button:hover::after {
+  transform: translateX(100%);
+  right: 0;
+}
+.highlight-yellow {
+  color: #e39f0c; /* 🔴 تغيير اللون حسب رغبتك */
+  font-weight: bold; /* 💪 اختيارياً: جعل الخط سميك */
+  text-shadow: 4px 4px 5px rgba(227, 159, 12, 0.6);
+  box-shadow: rgba(227, 159, 12, 0.6);
+}
+.end-shift {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+h3 {
+  margin-top: 3%;
+  text-shadow: 4px 4px 5px rgba(227, 159, 12, 0.6);
+}
